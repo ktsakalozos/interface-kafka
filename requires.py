@@ -14,6 +14,7 @@ from charms.reactive import RelationBase
 from charms.reactive import hook
 from charms.reactive import scopes
 
+
 class KafkaRequires(RelationBase):
     scope = scopes.UNIT
 
@@ -45,4 +46,3 @@ class KafkaRequires(RelationBase):
             raise Exception("No remote endpoint set.")
 
         return self.conversations()[0].get_remote('private-address')
-

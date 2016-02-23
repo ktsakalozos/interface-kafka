@@ -38,8 +38,7 @@ class KafkaProvides(RelationBase):
     # @when('{relation}.available')
     # to configure the relation data
     def send_configuration(self, port):
-        
         conv = self.conversation()
-        conv.set_remote(data = {
+        conv.set_remote(data={
             'port': port,
         })
